@@ -1,0 +1,67 @@
+Program Name:
+Find a restaurant.
+
+Program Description:
+Write a program that asks whether any members of your party are 
+    vegetarian, 
+    vegan, 
+    gluten-free, 
+    
+to which then displays only the restaurants to which you may take the group. 
+
+Design:
+A. INPUT
+temp = ""  # String for y/n inputs
+glutenFree # Boolean
+vegetarian # Boolean
+vegan      # Boolean
+
+B. OUTPUT
+bambooSushi = "Bamboo Sushi"
+grassa = "Grassa"
+ovenAndShaker = "Oven and Shaker"
+screenDoor = "Screen Door"
+verdeCocina = "Verde Cocina"
+
+C. CALCULATIONS
+                    Vegetarian  Vegan   Gluten-Free
+Bamboo Sushi        Yes         Yes     Yes 
+Grassa              Yes         No      Yes
+Oven and Shaker     Yes         Yes     Yes
+Screen Door         No          No      No
+Verde Cocina        Yes         No      No
+
+D. LOGIC and ALGORITHMS
+
+START
+MESSAGE "RESTAURANT NEAR ME PREFERENCES"
+
+PROMPT  "Vegetarian  [y/n] y"
+INPUT    vegetarian 
+
+PROMPT  "Vegan  [y/n] y"
+INPUT    vegan
+
+PROMPT  "Gluten-Free  [y/n] y"
+INPUT    glutenFree
+
+FILTER by matching property table SEE CALCULATIONS
+
+Display results, see sample run.
+END
+
+SAMPLE RUNS
+
+RESTAURANT NEAR ME PREFERENCES
+Vegetarian  [y/n] y
+Vegan       [y/n] N
+Gluten-Free [y/n] y
+
+RESTAURANTS WITH YOUR PREFERENCES:
+Bamboo Sushi 
+Grassa
+Oven and Shaker
+
+
+
+
