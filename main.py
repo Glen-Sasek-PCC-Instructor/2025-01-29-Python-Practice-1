@@ -28,15 +28,20 @@ print("RESTAURANT NEAR ME PREFERENCES")
 
 # PROMPT  "Vegetarian  [y/n] y"
 # INPUT    vegetarian
-vegetarian = input('Vegetarian  [y/n]  ').lower() == 'y'
+temp = input('Vegetarian  [y/n]  ').lower() or "n"
+vegetarian = temp[0] == 'y'
 
 # PROMPT  "Vegan  [y/n] y"
 # INPUT    vegan
-vegan = input('Vegan  [y/n]  ').lower() == 'y'
+try:
+    vegan = input('Vegan  [y/n]  ').lower()[0] == 'y'
+except Exception as e:
+    vegan = False
 
 # PROMPT  "Gluten-Free  [y/n] y"
 # INPUT    glutenFree
-glutenFree = input('Gluten-Free  [y/n]  ').lower() == 'y'
+temp = input('Vegetarian  [y/n]  ').lower() 
+glutenFree = len(temp) >= 1 and temp[0] == 'y'
 
 # FILTER by matching property table SEE CALCULATIONS
 #                     Vegetarian  Vegan   Gluten-Free
